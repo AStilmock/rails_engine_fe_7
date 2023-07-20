@@ -1,0 +1,8 @@
+<h1><%= @merchant.name %>'s Homepage, See Current Items Below:</h1>
+<ul>
+  <% @items.each do |item| %>
+    <li>
+      <%= link_to item.name, item_path(item.id) %>
+    </li>
+  <% end %>
+</ul>
